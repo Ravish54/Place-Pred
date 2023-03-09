@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
 import joblib
-import pickle
 import numpy as np
 from PIL import Image
 img = Image.open('th.jpg')
