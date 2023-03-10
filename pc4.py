@@ -16,12 +16,13 @@ def main():
     html_temp="""
 <style>
 [data-testid="stAppViewContainer"]{
-     background-color:  #36fc93 ;
+     background-color:#86aaf8;    # light blue:
    
 }
-.st-ae st-af st-ag st-dj st-ai st-aj st-cm st-cg st-b8{
-    background-color:  #36fc93 ;
+.fa {
+    font-size=500px !important;
 }
+
 </style>
 """
     model = joblib.load('model_campus_placement_final.json')
@@ -30,7 +31,8 @@ def main():
     st.write('')
     st.write('')
     st.write('')
-    st.markdown("**Do you want to know your placement Status???**")
+    st.title("Do you want to know your placement Status???")
+    # st.subheader()
     p1=st.radio("**Select Your Gender..!!**",("Male","Female"))
     if p1=="Male":
         p1=0
