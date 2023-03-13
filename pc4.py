@@ -96,12 +96,17 @@ def main():
     if st.button("Predict"):
         pred=model.predict(new_data)
         prob=model.predict_proba(new_data)
-        if pred[0]==0:
-            st.warning("Sorry you can't place :disappointed_relieved: ")
-            st.warning("You should upgrade your test percentage and gain experiance by doing more intenships")
+        if s1<50 and p11<50:
+            st.warning("Sorry you can't place ")
+        elif s1<50 or p11<50:
+            st.warning("Sorry you can't place ")
         else:
-            st.balloons()
-            st.success("You will be placed with probability of {} % ".format(np.floor(prob[0][1]*100)))
+            if pred[0]==0:
+                st.warning(":black[Sorry you can't place] :disappointed_relieved: ")
+                st.warning("You should upgrade your test percentage and gain experiance by doing more intenships")
+            else:
+                st.balloons()
+                st.success("You will be placed with probability of {} % ".format(np.floor(prob[0][1]*100)))
       
 
     
